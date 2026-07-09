@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para minha pessoa favorita 💙💜</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-align: center;
+   background: linear-gradient(135deg, #2b145f, #6f2dbd, #0077b6, #00a6fb);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+}
+.card {
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+}
+
+.aranha {
+    font-size: 50px;
+}
+
+button {
+    background: linear-gradient(90deg,#e91e63,#7b1fa2);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.galeria {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.galeria img {
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:20px;
+    border:3px solid white;
+}
+
+.carta {
+    display:none;
+    background:white;
+    color:#333;
+    border-radius:20px;
+    padding:25px;
+    margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="aranha">🕷️</div>
+
+<h1>Para minha pessoa favorita</h1>
+
+<p>
+Meli & Ju<br>
+
+</p><div class="card">
+
+<h2>⌛</h2>
+
+<p id="contador"></p>
+
+</div>
+
+
+<div class="card">
+
+<h2>💜🎵💙</h2>
+<a href="https://open.spotify.com/playlist/6OTwLbXw6W7GoZ2koi3kGH?si=1KqGP233Q5OgdAWVDBwJ2w&utm_source=copy-link&pi=GrjLxd6ESruf8" target="_blank">
+
+<button>
+Abrir playlist 
+</button>
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+
+
+<div class="galeria">
+
+
+<img src="foto1.jpg">
+
+
+
+</div>
+
+
+<div class="card">
+
+<h2>💌</h2>
+
+<button onclick="abrirCarta()">
+clique aqui
+</button>
+
+<div class="carta" id="carta">
+
+<p>
+Meu amor,
+</p>
+
+<p>
+Obrigada por ser você, eu te amo e tenho muito orgulho de ti meu homenzinho.
+</p>
+
+<p>
+Obrigada por ser minha pessoa favorita e deixar meus dias mais leves.
+</p>
+
+<p>
+Que essa seja só a primeira página da nossa história. 
+</p>
+
+<p>
+Com amor,<br>
+Sua gatinha.
+</p>
+
+</div>
+
+</div>
+
+
+
+<footer>
+💙💜 Feito com amor 🕷️
+</footer>
+
+
+</div><script>
+
+const inicio = new Date("2025-12-19T00:00:00");
+
+
+function atualizarContador(){
+
+    const agora = new Date();
+
+    const diferenca = agora - inicio;
+
+
+    const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
+    const horas = Math.floor((diferenca / (1000 * 60 * 60)) % 24);
+
+    const minutos = Math.floor((diferenca / (1000 * 60)) % 60);
+
+    const segundos = Math.floor((diferenca / 1000) % 60);
+
+
+    document.getElementById("contador").innerHTML =
+    dias + " dias, " +
+    horas + " horas, " +
+    minutos + " minutos e " +
+    segundos + " segundos ❤️";
+
+}
+
+
+setInterval(atualizarContador,1000);
+
+atualizarContador();
+
+
+
+function abrirCarta(){
+
+    document.getElementById("carta").style.display = "block";
+
+}
+
+</script>
+
+
+</body>
+</html>
